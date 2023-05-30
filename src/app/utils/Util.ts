@@ -1,0 +1,7 @@
+const dateToString = () =>{
+
+}
+
+export {
+    dateToString
+}
