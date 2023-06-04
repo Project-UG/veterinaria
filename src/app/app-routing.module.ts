@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AdministracionModule } from './pages/administracion/administracion.module';
 import { CitasMedicasModule } from './pages/citas-medicas/citas-medicas.module';
-import { FichaMedicaModule } from './pages/ficha-medica/ficha-medica.module';
+import { FichaMedicaModule } from './pages/fichas-medicas/fichas-medicas.module';
 import { GestionMedicosModule } from './pages/gestion-medicos/gestion-medicos.module';
 import { HistorialMedicoModule } from './pages/historial-medico/historial-medico.module';
 import { MascotasModule } from './pages/mascotas/mascotas.module';
@@ -32,9 +32,9 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'ficha-medica',
+    path: 'fichas-medicas',
     loadChildren: () =>
-      import('./pages/ficha-medica/ficha-medica.module').then(
+      import('./pages/fichas-medicas/fichas-medicas.module').then(
         (m) => m.FichaMedicaModule
       ),
   },
