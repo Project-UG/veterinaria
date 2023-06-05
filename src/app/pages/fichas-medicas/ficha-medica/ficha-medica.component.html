@@ -8,10 +8,14 @@
     <h5 class="card-title">{{ fichaMedica.paciente.nombre }}</h5>
     <p class="card-text">
       <strong> Registro:</strong> {{ fichaMedica.registro }}<br />
-      <strong>Actualizacion:</strong>
+      <strong>Actualización:</strong>
       {{ fichaMedica.actualizacion }}<br />
       <strong>Propietario:</strong> {{ fichaMedica.propietario.nombre }}
     </p>
-    <a href="#" class="btn btn-primary">Ficha Médica</a>
+    <a
+      [routerLink]="['/fichas-medicas/detalles', fichaMedica.id]"
+      class="btn btn-primary"
+      >Ficha Médica</a
+    >
   </div>
 </div>
