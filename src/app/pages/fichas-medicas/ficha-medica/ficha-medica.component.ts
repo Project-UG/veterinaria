@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FichaMedica } from 'src/app/types/fichaMedica';
 
 @Component({
   selector: 'app-ficha-medica',
   templateUrl: './ficha-medica.component.html',
-  styleUrls: ['./ficha-medica.component.css']
+  styleUrls: ['./ficha-medica.component.css'],
 })
 export class FichaMedicaComponent implements OnInit {
+  @Input() fichaMedica!: FichaMedica;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

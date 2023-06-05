@@ -1,1 +1,17 @@
-<p>ficha-medica works!</p>
+<div class="card" style="width: 18rem">
+  <img
+    [src]="fichaMedica.paciente.foto"
+    class="card-img-top"
+    alt="Foto de {{ fichaMedica.paciente.nombre }}"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ fichaMedica.paciente.nombre }}</h5>
+    <p class="card-text">
+      <strong> Registro:</strong> {{ fichaMedica.registro }}<br />
+      <strong>Actualizacion:</strong>
+      {{ fichaMedica.actualizacion }}<br />
+      <strong>Propietario:</strong> {{ fichaMedica.propietario.nombre }}
+    </p>
+    <a href="#" class="btn btn-primary">Ficha Médica</a>
+  </div>
+</div>
