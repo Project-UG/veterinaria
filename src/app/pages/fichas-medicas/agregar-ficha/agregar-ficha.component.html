@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-6">
+      <form>
+        <h2 class="text-center mb-4">Nueva Ficha Médica</h2>
+        <div class="mb-3">
+          <label for="email" class="form-label"
+            ><strong>Email del propietario</strong></label
+          >
+          <input type="email" class="form-control" id="email" required />
+        </div>
+        <div class="mb-3">
+          <label for="mucosas" class="form-label"
+            ><strong>Color de mucosas</strong></label
+          >
+          <select class="form-select" id="mucosas" required>
+            <option selected disabled value="">Seleccione una opción</option>
+            <option value="rosado">Rosado</option>
+            <option value="rojo">Rojo</option>
+            <option value="blanco">Blanco</option>
+            <option value="azul">Azul</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="palpitacion" class="form-label"
+            ><strong>Palpitación Abdominal</strong></label
+          >
+          <select class="form-select" id="palpitacion" required>
+            <option selected disabled value="">Seleccione una opción</option>
+            <option value="normal">Normal</option>
+            <option value="aumentada">Aumentada</option>
+            <option value="disminuida">Disminuida</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="genitales" class="form-label"
+            ><strong>Genitales</strong></label
+          >
+          <select class="form-select" id="genitales" required>
+            <option selected disabled value="">Seleccione una opción</option>
+            <option value="intactos">Intactos</option>
+            <option value="castrados">Castrados</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="pulso" class="form-label"
+            ><strong>Pulso Femoral</strong></label
+          >
+          <select class="form-select" id="pulso" required>
+            <option selected disabled value="">Seleccione una opción</option>
+            <option value="normal">Normal</option>
+            <option value="aumentado">Aumentado</option>
+            <option value="disminuido">Disminuido</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="temperatura" class="form-label"
+            ><strong>Temperatura</strong></label
+          >
+          <div class="input-group">
+            <input
+              type="number"
+              class="form-control"
+              id="temperatura"
+              required
+            />
+            <span class="input-group-text">°</span>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="observaciones" class="form-label"
+            ><strong>Observaciones</strong></label
+          >
+          <textarea class="form-control" id="observaciones" rows="3"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

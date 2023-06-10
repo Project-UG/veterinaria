@@ -1,13 +1,40 @@
-<div class="card mb-3">
-  <img src="..." class="card-img-top" alt="..." />
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">
-      This is a wider card with supporting text below as a natural lead-in to
-      additional content. This content is a little bit longer.
-    </p>
-    <p class="card-text">
-      <small class="text-body-secondary">Last updated 3 mins ago</small>
-    </p>
+<div class="container mt-5">
+  <button
+    class="btn btn-primary mb-3"
+    [routerLink]="['/historial-medico', fichaMedica.historial_id]"
+    type="button"
+  >
+    <i class="bi bi-arrow-left-short"></i> Atrás
+  </button>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title mb-3">Ficha Médica #{{ fichaMedica.id }}</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <h6 class="card-subtitle mb-2 text-muted">Registro</h6>
+          <p class="card-text">{{ fichaMedica.registro }}</p>
+
+          <h6 class="card-subtitle mb-2 text-muted">Color Mucosas</h6>
+          <p class="card-text">{{ fichaMedica.color_mucosas }}</p>
+
+          <h6 class="card-subtitle mb-2 text-muted">Palpitación abdominal</h6>
+          <p class="card-text">{{ fichaMedica.palpitacion_abdominal }}</p>
+
+          <h6 class="card-subtitle mb-2 text-muted">Genitales</h6>
+          <p class="card-text">{{ fichaMedica.genitales }}</p>
+
+          <h6 class="card-subtitle mb-2 text-muted">Temperatura</h6>
+          <p class="card-text">{{ fichaMedica.temperatura }}°</p>
+
+          <h6 class="card-subtitle mb-2 text-muted">Pulso femoral</h6>
+          <p class="card-text">{{ fichaMedica.pulso_femoral }}</p>
+        </div>
+
+        <div class="col-md-6">
+          <h6 class="card-subtitle mb-2 text-muted">Observaciones</h6>
+          <p class="card-text">{{ fichaMedica.observaciones }}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

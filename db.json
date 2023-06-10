@@ -1,0 +1,380 @@
+{
+  "pacientes": [
+    {
+      "id": 1,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Rufus",
+      "edad": 4,
+      "especie": "Canino",
+      "raza": "Husky",
+      "color": "Blanco y negro",
+      "sexo": "Macho",
+      "peso": 30,
+      "foto": "/assets/images/pacientes/pexels-antonio-florentini-803766.jpg"
+    },
+    {
+      "id": 2,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Rita",
+      "edad": 4,
+      "especie": "Canino",
+      "raza": "Husky",
+      "color": "Blanco y negro",
+      "sexo": "Hembra",
+      "peso": 30,
+      "foto": "/assets/images/pacientes/pexels-viridiana-o-rivera-16623449.jpg"
+    },
+    {
+      "id": 3,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Mala",
+      "edad": 4,
+      "especie": "Canino",
+      "raza": "Husky",
+      "color": "Blanco y negro",
+      "sexo": "Hembra",
+      "peso": 30,
+      "foto": "/assets/images/pacientes/pexels-cottonbro-studio-4056462.jpg"
+    },
+    {
+      "id": 4,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Ala",
+      "edad": 4,
+      "especie": "Canino",
+      "raza": "Husky",
+      "color": "Blanco y negro",
+      "sexo": "Hembra",
+      "peso": 30,
+      "foto": "/assets/images/pacientes/pexels-tanika-3687770.jpg"
+    },
+    {
+      "id": 5,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Omar",
+      "edad": 4,
+      "especie": "Felino",
+      "raza": "Husky",
+      "color": "Blanco y negro",
+      "sexo": "Macho",
+      "peso": 30,
+      "foto": "/assets/images/pacientes/pexels-matheus-bertelli-7410722.jpg"
+    },
+    {
+      "id": 6,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Lola",
+      "edad": 4,
+      "especie": "Felino",
+      "raza": "Husky",
+      "color": "Blanco y negro",
+      "sexo": "Hembra",
+      "peso": 30,
+      "foto": "/assets/images/pacientes/pexels-alice-castro-1835008.jpg"
+    },
+    {
+      "id": 7,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Lápiz",
+      "edad": 4,
+      "especie": "Canino",
+      "raza": "Husky",
+      "color": "Blanco y negro",
+      "sexo": "Macho",
+      "peso": 30,
+      "foto": "/assets/images/pacientes/pexels-evg-kowalievska-1170986.jpg"
+    },
+    {
+      "id": 8,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Oso",
+      "edad": 4,
+      "especie": "Canino",
+      "raza": "Husky",
+      "color": "Blanco y negro",
+      "sexo": "Macho",
+      "peso": 30,
+      "foto": "/assets/images/pacientes/pexels-goochie-poochie-grooming-3361739.jpg"
+    },
+    {
+      "id": 9,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Susto",
+      "edad": 4,
+      "especie": "Canino",
+      "raza": "Husky",
+      "color": "Blanco y negro",
+      "sexo": "Macho",
+      "peso": 30,
+      "foto": "/assets/images/pacientes/pexels-laura-stanley-3090875.jpg"
+    },
+    {
+      "id": 10,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Nieve",
+      "edad": 4,
+      "especie": "Canino",
+      "raza": "Husky",
+      "color": "Blanco y negro",
+      "sexo": "Macho",
+      "peso": 30,
+      "foto": "/assets/images/pacientes/pexels-valeria-boltneva-1805164.jpg"
+    }
+  ],
+  "propietarios": [
+    {
+      "id": 1,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Juan",
+      "apellido": "Valdez",
+      "telefono": 123465798,
+      "direccion": "ciudad, mz v",
+      "email": "juan@example.com"
+    },
+    {
+      "id": 2,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Juan",
+      "apellido": "Valdez",
+      "telefono": 123465798,
+      "direccion": "ciudad, mz v",
+      "email": "juan@example.com"
+    },
+    {
+      "id": 3,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Juan",
+      "apellido": "Valdez",
+      "telefono": 123465798,
+      "direccion": "ciudad, mz v",
+      "email": "juan@example.com"
+    },
+    {
+      "id": 4,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Juan",
+      "apellido": "Valdez",
+      "telefono": 123465798,
+      "direccion": "ciudad, mz v",
+      "email": "juan@example.com"
+    },
+    {
+      "id": 5,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "nombre": "Juan",
+      "apellido": "Valdez",
+      "telefono": 123465798,
+      "direccion": "ciudad, mz v",
+      "email": "juan@example.com"
+    }
+  ],
+  "historiales-medicos": [
+    {
+      "id": 1,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "paciente_id": 1,
+      "propietario_id": 1
+    },
+    {
+      "id": 2,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "paciente_id": 2,
+      "propietario_id": 1
+    },
+    {
+      "id": 3,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "paciente_id": 3,
+      "propietario_id": 1
+    },
+    {
+      "id": 4,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "paciente_id": 4,
+      "propietario_id": 1
+    },
+    {
+      "id": 5,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "paciente_id": 5,
+      "propietario_id": 1
+    },
+    {
+      "id": 6,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "paciente_id": 6,
+      "propietario_id": 1
+    },
+    {
+      "id": 72,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "paciente_id": 7,
+      "propietario_id": 1
+    },
+    {
+      "id": 8,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "paciente_id": 8,
+      "propietario_id": 1
+    },
+    {
+      "id": 9,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "paciente_id": 9,
+      "propietario_id": 1
+    },
+    {
+      "id": 10,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "paciente_id": 10,
+      "propietario_id": 1
+    }
+  ],
+  "fichas-medicas": [
+    {
+      "id": 1,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "historial_id": 1,
+      "color_mucosas": "Congestivas",
+      "palpitacion_abdominal": "Sin dolor ni molestia",
+      "genitales": "Normal",
+      "temperatura": 38,
+      "pulso_femoral": "Palpable/lleno",
+      "observaciones": "Descripción de la observación"
+    },
+    {
+      "id": 2,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "historial_id": 2,
+      "color_mucosas": "Congestivas",
+      "palpitacion_abdominal": "Sin dolor ni molestia",
+      "genitales": "Normal",
+      "temperatura": 38,
+      "pulso_femoral": "Palpable/lleno",
+      "observaciones": "Descripción de la observación"
+    },
+    {
+      "id": 3,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "historial_id": 3,
+      "color_mucosas": "Congestivas",
+      "palpitacion_abdominal": "Sin dolor ni molestia",
+      "genitales": "Normal",
+      "temperatura": 38,
+      "pulso_femoral": "Palpable/lleno",
+      "observaciones": "Descripción de la observación"
+    },
+    {
+      "id": 4,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "historial_id": 4,
+      "color_mucosas": "Congestivas",
+      "palpitacion_abdominal": "Sin dolor ni molestia",
+      "genitales": "Normal",
+      "temperatura": 38,
+      "pulso_femoral": "Palpable/lleno",
+      "observaciones": "Descripción de la observación"
+    },
+    {
+      "id": 5,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "historial_id": 5,
+      "color_mucosas": "Congestivas",
+      "palpitacion_abdominal": "Sin dolor ni molestia",
+      "genitales": "Normal",
+      "temperatura": 38,
+      "pulso_femoral": "Palpable/lleno",
+      "observaciones": "Descripción de la observación"
+    },
+    {
+      "id": 6,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "historial_id": 6,
+      "color_mucosas": "Congestivas",
+      "palpitacion_abdominal": "Sin dolor ni molestia",
+      "genitales": "Normal",
+      "temperatura": 38,
+      "pulso_femoral": "Palpable/lleno",
+      "observaciones": "Descripción de la observación"
+    },
+    {
+      "id": 7,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "historial_id": 7,
+      "color_mucosas": "Congestivas",
+      "palpitacion_abdominal": "Sin dolor ni molestia",
+      "genitales": "Normal",
+      "temperatura": 38,
+      "pulso_femoral": "Palpable/lleno",
+      "observaciones": "Descripción de la observación"
+    },
+    {
+      "id": 8,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "historial_id": 8,
+      "color_mucosas": "Congestivas",
+      "palpitacion_abdominal": "Sin dolor ni molestia",
+      "genitales": "Normal",
+      "temperatura": 38,
+      "pulso_femoral": "Palpable/lleno",
+      "observaciones": "Descripción de la observación"
+    },
+    {
+      "id": 9,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "historial_id": 9,
+      "color_mucosas": "Congestivas",
+      "palpitacion_abdominal": "Sin dolor ni molestia",
+      "genitales": "Normal",
+      "temperatura": 38,
+      "pulso_femoral": "Palpable/lleno",
+      "observaciones": "Descripción de la observación"
+    },
+    {
+      "id": 10,
+      "registro": "2023-04-23T18:25:43.511Z",
+      "actualizacion": "2023-04-23T18:25:43.511Z",
+      "historial_id": 10,
+      "color_mucosas": "Congestivas",
+      "palpitacion_abdominal": "Sin dolor ni molestia",
+      "genitales": "Normal",
+      "temperatura": 38,
+      "pulso_femoral": "Palpable/lleno",
+      "observaciones": "Descripción de la observación"
+    }
+  ]
+}
