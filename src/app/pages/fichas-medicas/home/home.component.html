@@ -1,0 +1,12 @@
+<section>
+  <form>
+    <input type="text" placeholder="Filtrar" #filtro />
+    <button class="primary" type="button">Buscar</button>
+  </form>
+</section>
+<section class="results">
+  <app-ficha-medica
+    *ngFor="let fichaMedica of listaFichasMedicas"
+    [fichaMedica]="fichaMedica"
+  ></app-ficha-medica>
+</section>
