@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
  
@@ -17,11 +16,13 @@ const routes: Routes = [
   },
   {
     path:'',
-    redirectTo:'app'
+    redirectTo:'app',
+    pathMatch : 'full'
   },
   {
     path:'**',
-    redirectTo:'app'
+    redirectTo:'app',
+    pathMatch : 'full'
   }
 ];
 

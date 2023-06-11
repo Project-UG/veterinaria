@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { MainComponent } from './main/main.component';
 import { Route, RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
-import { AdministracionModule } from './administracion/administracion.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes:Route[] = [

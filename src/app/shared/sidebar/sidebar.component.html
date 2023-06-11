@@ -1,19 +1,35 @@
-<div class="sidebar">
-    <ul class="sidebar-menu">
-      <li>
-        <a href="#">Inicio</a>
-      </li>
-      <li class="has-submenu">
-        <a href="#">Nivel 1</a>
-        <ul class="submenu">
-          <li><a href="#">Submenú 1</a></li>
-          <li><a href="#">Submenú 2</a></li>
-          <li><a href="#">Submenú 3</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Otra opción</a>
-      </li>
-    </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <a class="navbar-brand me-3" href="#">Sistema Veterinario</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pacientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/fichas-medicas']"
+            >Fichas Médicas</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Registro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Iniciar Sesión</a>
+        </li>
+      </ul>
+    </div>
   </div>
+</nav>
   
