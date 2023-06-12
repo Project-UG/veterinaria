@@ -1,0 +1,129 @@
+<div class="container mt-5">
+  <button
+    class="btn btn-primary mb-3"
+    [routerLink]="['/fichas-medicas']"
+    type="button"
+  >
+    <i class="bi bi-arrow-left-short"></i> Atrás
+  </button>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img [src]="paciente.foto" class="card-img-top" alt="Profile Picture" />
+        <div class="card-body">
+          <h5 class="card-title">{{ paciente.nombre }}</h5>
+          <div class="card-text">
+            <strong>Registrado: </strong>{{ paciente.registro }}
+            <br />
+            <strong>Edad: </strong>{{ paciente.edad }} años
+            <br />
+            <strong>Especie: </strong>{{ paciente.especie }}
+            <br />
+            <strong>Raza: </strong>{{ paciente.raza }}
+            <br />
+            <strong>Color: </strong>{{ paciente.color }}
+            <br />
+            <strong>Sexo: </strong>{{ paciente.sexo }}
+            <br />
+            <strong>Peso: </strong>{{ paciente.peso }}kg
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="accordion" id="accordionPanel">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="citasPanel">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#citasCollapse"
+              aria-expanded="true"
+              aria-controls="citasCollapse"
+            >
+              Citas Médicas
+            </button>
+          </h2>
+          <div
+            id="citasCollapse"
+            class="accordion-collapse collapse show"
+            aria-labelledby="citasPanel"
+            data-bs-parent="#accordionPanel"
+          >
+            <div class="accordion-body">
+              <ul class="list-group">
+                <li class="list-group-item">Cita 1</li>
+                <li class="list-group-item">Cita 2</li>
+                <li class="list-group-item">Cita 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="fichasPanel">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#fichasCollapse"
+              aria-expanded="false"
+              aria-controls="fichasCollapse"
+            >
+              Fichas Médicas
+            </button>
+          </h2>
+          <div
+            id="fichasCollapse"
+            class="accordion-collapse collapse"
+            aria-labelledby="fichasPanel"
+            data-bs-parent="#accordionPanel"
+          >
+            <div class="accordion-body">
+              <ul class="list-group">
+                <li
+                  class="list-group-item"
+                  *ngFor="let fichaMedica of fichasMedicas"
+                >
+                  <a
+                    [routerLink]="['/fichas-medicas/detalles', fichaMedica.id]"
+                  >
+                    {{ fichaMedica.observaciones }}</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="diagnosticosPanel">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#diagnosticosCollapse"
+              aria-expanded="false"
+              aria-controls="diagnosticosCollapse"
+            >
+              Diagnósticos Médicos
+            </button>
+          </h2>
+          <div
+            id="diagnosticosCollapse"
+            class="accordion-collapse collapse"
+            aria-labelledby="diagnosticosPanel"
+            data-bs-parent="#accordionPanel"
+          >
+            <div class="accordion-body">
+              <ul class="list-group">
+                <li class="list-group-item">Diagnóstico 1</li>
+                <li class="list-group-item">Diagnóstico 2</li>
+                <li class="list-group-item">Diagnóstico 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

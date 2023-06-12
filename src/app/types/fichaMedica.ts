@@ -1,20 +1,12 @@
-import { Paciente } from './paciente';
-import { Propietario } from './propietario';
-
 export interface FichaMedica {
   id: number;
-  propietario: Propietario;
-  paciente: Paciente;
-  obtencion: Obtencion;
+  historial_id: number;
   registro: Date;
   actualizacion: Date;
-}
-
-export enum Obtencion {
-  Compra = 'Compra',
-  Rescatado = 'Rescatado',
-  NacidoEnCasa = 'Nacido en casa',
-  Regalo = 'Regalo',
-  Adopcion = 'Adopcion',
-  NA = 'N/A',
+  color_mucosas: string;
+  palpitacion_abdominal: string;
+  genitales: string;
+  temperatura: number;
+  pulso_femoral: string;
+  observaciones: string;
 }
