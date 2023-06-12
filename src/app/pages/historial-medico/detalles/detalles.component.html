@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <button
     class="btn btn-primary mb-3"
-    [routerLink]="['/fichas-medicas']"
+    [routerLink]="['/app/fichas-medicas']"
     type="button"
   >
     <i class="bi bi-arrow-left-short"></i> Atrás
@@ -86,7 +86,10 @@
                   *ngFor="let fichaMedica of fichasMedicas"
                 >
                   <a
-                    [routerLink]="['/fichas-medicas/detalles', fichaMedica.id]"
+                    [routerLink]="[
+                      '/app/fichas-medicas/detalles',
+                      fichaMedica.id
+                    ]"
                   >
                     {{ fichaMedica.observaciones }}</a
                   >

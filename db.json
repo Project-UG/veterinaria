@@ -84,7 +84,7 @@
       "actualizacion": "2023-04-23T18:25:43.511Z",
       "nombre": "Lápiz",
       "edad": 4,
-      "especie": "Canino",
+      "especie": "Felino",
       "raza": "Husky",
       "color": "Blanco y negro",
       "sexo": "Macho",
@@ -227,7 +227,7 @@
       "propietario_id": 1
     },
     {
-      "id": 72,
+      "id": 7,
       "registro": "2023-04-23T18:25:43.511Z",
       "actualizacion": "2023-04-23T18:25:43.511Z",
       "paciente_id": 7,
