@@ -25,7 +25,7 @@
       >
         <div class="card-body">
           <div class="row align-items-center">
-            <div class="col-md-4 mb-3 mb-md-0 text-center">
+            <div class="col-lg-4 mb-3 mb-md-0 text-center">
               <h5>
                 <strong>Propietario: </strong> {{ propietario.nombre }}
                 {{ propietario.apellido }}
@@ -38,7 +38,7 @@
                 <strong>Email: </strong> {{ propietario.email }}
               </div>
             </div>
-            <div class="col-md-4 mb-3 mb-md-0 text-center">
+            <div class="col-lg-4 mb-3 mb-md-0 text-center">
               <h5><strong>Especie: </strong> {{ paciente.especie }}</h5>
               <div class="mt-3">
                 <strong>Edad: </strong> {{ paciente.edad }}
@@ -52,20 +52,20 @@
                 <strong>Color: </strong> {{ paciente.color }}
               </div>
             </div>
-            <div class="col-md-4 mb-3 mb-md-0 text-center">
+            <div class="col-lg-4 mb-3 mb-md-0 text-center">
               <img
                 class="rounded"
                 [src]="paciente.foto"
                 alt="Foto del
               paciente {{ paciente.nombre }}"
-                width="200"
+                width="150"
               />
             </div>
           </div>
           <div class="mt-3 text-center">
             <a
               class="btn btn-primary"
-              [routerLink]="['/historial-medico', historial.id]"
+              [routerLink]="['/app/historial-medico', historial.id]"
               >Historial Médico</a
             >
           </div>

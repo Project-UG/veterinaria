@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <button
     class="btn btn-primary mb-3"
-    [routerLink]="['/historial-medico', fichaMedica.historial_id]"
+    [routerLink]="['/app/historial-medico', fichaMedica.historial_id]"
     type="button"
   >
     <i class="bi bi-arrow-left-short"></i> Atrás
@@ -28,6 +28,7 @@
 
           <h6 class="card-subtitle mb-2 text-muted">Pulso femoral</h6>
           <p class="card-text">{{ fichaMedica.pulso_femoral }}</p>
+          <br />
         </div>
 
         <div class="col-md-6">
