@@ -2,7 +2,7 @@
   <div class="row justify-content-center mt-3">
     <div class="col-lg-6">
       <form>
-        <h2 class="text-center mb-4">Regístrate</h2>
+        <h2 class="text-center mb-4">Registrar Usuario</h2>
 
         <div class="form-outline mb-4">
           <label for="user" class="form-label"><strong>Usuario</strong></label>
@@ -25,12 +25,24 @@
         </div>
 
         <div class="form-outline mb-4">
+          <label for="tipoDeUsuario" class="form-label"
+            ><strong>Tipo de Usuario</strong></label
+          >
+          <select class="form-select" id="tipoDeUsuario" required>
+            <option selected disabled value="">Seleccione una opción</option>
+            <option value="administrador">Administrador</option>
+            <option value="veterinario">Veterinario</option>
+            <option value="empleado">Empleado</option>
+          </select>
+        </div>
+
+        <div class="form-outline mb-4">
           <label class="form-label" for="loginPassword"><strong>Contraseña</strong></label>
           <input type="password" id="loginPassword" class="form-control" required/>
         </div>
 
         <div class="text-center mb-4">
-          <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+          <button type="submit" class="btn btn-primary btn-block">Registrar</button>
         </div>
 
         <div class="text-center mb-4">
