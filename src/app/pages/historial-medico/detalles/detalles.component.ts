@@ -38,14 +38,18 @@ export class DetallesComponent implements OnInit {
     this.historial = await this.historialMedicoService.getById(
       this.historialMedicoId
     );
+    console.log(this.historial);
     this.paciente = await this.pacienteService.getById(
       this.historial.paciente_id
     );
+    console.log(this.paciente);
     this.propietario = await this.propietarioService.getById(
       this.historial.propietario_id
     );
+    console.log(this.propietario);
     this.fichasMedicas = await this.fichaMedicaService.getMany(
       this.historialMedicoId
     );
+    console.log(this.fichasMedicas);
   }
 }

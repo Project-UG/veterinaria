@@ -18,6 +18,11 @@ export class PacienteService {
     return response.data;
   }
 
+  async getByNombre(nombre: string): Promise<Paciente> {
+    const response = await axios.get(`${this.url}?nombre=${nombre}`);
+    return response.data;
+  }
+
   async create(paciente: Paciente): Promise<Paciente> {
     const response = await axios.post(this.url, paciente);
     return response.data;

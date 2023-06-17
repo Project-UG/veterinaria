@@ -146,41 +146,41 @@
       "id": 2,
       "registro": "2023-04-23T18:25:43.511Z",
       "actualizacion": "2023-04-23T18:25:43.511Z",
-      "nombre": "Juan",
-      "apellido": "Valdez",
+      "nombre": "Maria",
+      "apellido": "Velez",
       "telefono": 123465798,
       "direccion": "ciudad, mz v",
-      "email": "juan@example.com"
+      "email": "maria@example.com"
     },
     {
       "id": 3,
       "registro": "2023-04-23T18:25:43.511Z",
       "actualizacion": "2023-04-23T18:25:43.511Z",
-      "nombre": "Juan",
-      "apellido": "Valdez",
+      "nombre": "Pedro",
+      "apellido": "Martinez",
       "telefono": 123465798,
       "direccion": "ciudad, mz v",
-      "email": "juan@example.com"
+      "email": "pedro@example.com"
     },
     {
       "id": 4,
       "registro": "2023-04-23T18:25:43.511Z",
       "actualizacion": "2023-04-23T18:25:43.511Z",
-      "nombre": "Juan",
-      "apellido": "Valdez",
+      "nombre": "Kevin",
+      "apellido": "López",
       "telefono": 123465798,
       "direccion": "ciudad, mz v",
-      "email": "juan@example.com"
+      "email": "kevin@example.com"
     },
     {
       "id": 5,
       "registro": "2023-04-23T18:25:43.511Z",
       "actualizacion": "2023-04-23T18:25:43.511Z",
-      "nombre": "Juan",
-      "apellido": "Valdez",
+      "nombre": "Julia",
+      "apellido": "Sosa",
       "telefono": 123465798,
       "direccion": "ciudad, mz v",
-      "email": "juan@example.com"
+      "email": "julia@example.com"
     }
   ],
   "historiales-medicos": [
@@ -196,28 +196,28 @@
       "registro": "2023-04-23T18:25:43.511Z",
       "actualizacion": "2023-04-23T18:25:43.511Z",
       "paciente_id": 2,
-      "propietario_id": 1
+      "propietario_id": 2
     },
     {
       "id": 3,
       "registro": "2023-04-23T18:25:43.511Z",
       "actualizacion": "2023-04-23T18:25:43.511Z",
       "paciente_id": 3,
-      "propietario_id": 1
+      "propietario_id": 3
     },
     {
       "id": 4,
       "registro": "2023-04-23T18:25:43.511Z",
       "actualizacion": "2023-04-23T18:25:43.511Z",
       "paciente_id": 4,
-      "propietario_id": 1
+      "propietario_id": 4
     },
     {
       "id": 5,
       "registro": "2023-04-23T18:25:43.511Z",
       "actualizacion": "2023-04-23T18:25:43.511Z",
       "paciente_id": 5,
-      "propietario_id": 1
+      "propietario_id": 5
     },
     {
       "id": 6,
@@ -231,28 +231,28 @@
       "registro": "2023-04-23T18:25:43.511Z",
       "actualizacion": "2023-04-23T18:25:43.511Z",
       "paciente_id": 7,
-      "propietario_id": 1
+      "propietario_id": 2
     },
     {
       "id": 8,
       "registro": "2023-04-23T18:25:43.511Z",
       "actualizacion": "2023-04-23T18:25:43.511Z",
       "paciente_id": 8,
-      "propietario_id": 1
+      "propietario_id": 3
     },
     {
       "id": 9,
       "registro": "2023-04-23T18:25:43.511Z",
       "actualizacion": "2023-04-23T18:25:43.511Z",
       "paciente_id": 9,
-      "propietario_id": 1
+      "propietario_id": 4
     },
     {
       "id": 10,
       "registro": "2023-04-23T18:25:43.511Z",
       "actualizacion": "2023-04-23T18:25:43.511Z",
       "paciente_id": 10,
-      "propietario_id": 1
+      "propietario_id": 5
     }
   ],
   "fichas-medicas": [

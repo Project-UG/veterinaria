@@ -18,6 +18,11 @@ export class PropietarioService {
     return response.data;
   }
 
+  async getByEmail(email: string): Promise<Propietario[]> {
+    const response = await axios.get(`${this.url}?email=${email}`);
+    return response.data;
+  }
+
   async create(propietario: Propietario): Promise<Propietario> {
     const response = await axios.post(this.url, propietario);
     return response.data;

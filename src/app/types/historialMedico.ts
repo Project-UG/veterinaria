@@ -1,5 +1,5 @@
 export interface HistorialMedico {
-  id: number;
+  id?: number;
   paciente_id: number;
   propietario_id: number;
 }
