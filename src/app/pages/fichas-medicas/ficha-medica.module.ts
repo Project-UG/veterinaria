@@ -5,6 +5,7 @@ import { FichasMedicasHomeComponent } from './home/home.component';
 import { FichaMedicaComponent } from './ficha-medica/ficha-medica.component';
 import { DetallesComponent } from './detalles/detalles.component';
 import { AgregarFichaComponent } from './agregar-ficha/agregar-ficha.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Route[] = [
   { path: '', component: FichasMedicasHomeComponent, title: 'Fichas Médicas' },
@@ -27,7 +28,12 @@ const routes: Route[] = [
     DetallesComponent,
     AgregarFichaComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   exports: [RouterModule],
 })
 export class FichaMedicaModule {}

@@ -1,5 +1,5 @@
 export interface FichaMedica {
-  id: number;
+  id?: number;
   historial_id: number;
   registro: Date;
   actualizacion: Date;

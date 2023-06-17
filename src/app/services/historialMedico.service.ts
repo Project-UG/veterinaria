@@ -18,6 +18,11 @@ export class HistorialMedicoService {
     return response.data;
   }
 
+  async getByPropietarioId(id: number): Promise<HistorialMedico[]> {
+    const response = await axios.get(`${this.url}?propietario_id=${id}`);
+    return response.data;
+  }
+
   async create(historialMedico: HistorialMedico): Promise<HistorialMedico> {
     const response = await axios.post(this.url, historialMedico);
     return response.data;
