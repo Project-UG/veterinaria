@@ -1,20 +1,28 @@
 <div class="container">
-  <div class="row justify-content-center mt-3">
-    <div class="col-lg-6">
-      <div class="input-group">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Buscar"
-          aria-label="Buscar"
-          aria-describedby="searchButton"
-        />
-        <button class="btn btn-primary" type="button" id="searchButton">
-          <i class="bi bi-search"></i>
-        </button>
+  <form>
+    <div class="row justify-content-center mt-3">
+      <div class="col-lg-6">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Buscar por paciente"
+            aria-label="Buscar"
+            aria-describedby="searchButton"
+            #filter
+          />
+          <button
+            class="btn btn-primary"
+            type="submit"
+            id="searchButton"
+            (click)="buscar(filter.value)"
+          >
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
+  </form>
   <div class="mt-3">
     <button
       class="btn btn-success mb-3 ms-3"
@@ -24,7 +32,7 @@
       <i class="bi bi-plus"></i> Nueva Ficha
     </button>
     <app-ficha-medica
-      *ngFor="let fichaMedica of listaFichasMedicas"
+      *ngFor="let fichaMedica of listaFiltrada"
       [fichaMedica]="fichaMedica"
     ></app-ficha-medica>
   </div>

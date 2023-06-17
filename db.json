@@ -375,6 +375,18 @@
       "temperatura": 38,
       "pulso_femoral": "Palpable/lleno",
       "observaciones": "Descripción de la observación"
+    },
+    {
+      "historial_id": 5,
+      "registro": "2023-06-17T21:41:50.060Z",
+      "actualizacion": "2023-06-17T21:41:50.060Z",
+      "color_mucosas": "rosado",
+      "palpitacion_abdominal": "aumentada",
+      "genitales": "intactos",
+      "temperatura": 37,
+      "pulso_femoral": "aumentado",
+      "observaciones": "no observaciones",
+      "id": 11
     }
   ]
 }
