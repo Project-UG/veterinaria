@@ -1,1 +1,28 @@
-<p>login works! FUNCIONA</p>
+<div class="container">
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-6">
+      <form>
+        <h2 class="text-center mb-4">Iniciar Sesión</h2>
+
+        <div class="form-outline mb-4">
+          <label for="user" class="form-label"><strong>Usuario</strong></label>
+          <input type="user" id="loginUsuario" class="form-control" required/>
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="loginPassword"><strong>Contraseña</strong></label>
+          <input type="password" id="loginPassword" class="form-control" required/>
+        </div>
+
+        <div class="text-center mb-4">
+          <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+        </div>
+
+        <div class="text-center mb-4">
+            <p>¿Eres Nuevo? <a [routerLink]="['/auth/registro']">Regístrate</a></p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

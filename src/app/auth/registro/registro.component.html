@@ -1,1 +1,43 @@
-<p>registro works!</p>
+<div class="container">
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-6">
+      <form>
+        <h2 class="text-center mb-4">Regístrate</h2>
+
+        <div class="form-outline mb-4">
+          <label for="user" class="form-label"><strong>Usuario</strong></label>
+          <input type="user" id="loginUsuario" class="form-control" required/>
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="loginNombre"><strong>Nombres</strong></label>
+          <input type="text" id="loginNames" class="form-control" required/>
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="loginApellidos"><strong>Apellidos</strong></label>
+          <input type="text" id="loginLastNames" class="form-control" required/>
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="loginName"><strong>Correo Electrónico</strong></label>
+          <input type="email" id="loginEmail" class="form-control" required />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="loginPassword"><strong>Contraseña</strong></label>
+          <input type="password" id="loginPassword" class="form-control" required/>
+        </div>
+
+        <div class="text-center mb-4">
+          <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+        </div>
+
+        <div class="text-center mb-4">
+          <p>¿Estás Registrado? <a [routerLink]="['/auth/login']">Inicia Sesión</a></p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
