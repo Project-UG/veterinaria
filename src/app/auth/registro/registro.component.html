@@ -20,8 +20,18 @@
         </div>
 
         <div class="form-outline mb-4">
-          <label class="form-label" for="loginName"><strong>Correo Electrónico</strong></label>
+          <label class="form-label" for="loginEmail"><strong>Correo Electrónico</strong></label>
           <input type="email" id="loginEmail" class="form-control" required />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="loginDireccion"><strong>Dirección</strong></label>
+          <input type="text" id="loginDireccion" class="form-control" required />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="loginTelefono"><strong>Teléfono</strong></label>
+          <input type="text" id="loginTelefono" class="form-control" required />
         </div>
 
         <div class="form-outline mb-4">
@@ -44,11 +54,6 @@
         <div class="text-center mb-4">
           <button type="submit" class="btn btn-primary btn-block">Registrar</button>
         </div>
-
-        <div class="text-center mb-4">
-          <p>¿Estás Registrado? <a [routerLink]="['/auth/login']">Inicia Sesión</a></p>
-        </div>
-
       </form>
     </div>
   </div>
