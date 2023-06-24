@@ -13,7 +13,7 @@ export interface Paciente {
 
 export enum Especie {
   Canino = 'Canino',
-  Felino = 'Falino',
+  Felino = 'Felino',
 }
 
 export enum Sexo {

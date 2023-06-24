@@ -1,0 +1,71 @@
+
+<div class="container-fluid" >
+    <div class="container-fluid"  style ="box-shadow: 2px 3px 4px;" >
+        <div class="row">
+  
+          <!-- style="padding: 2rem 3rem; -->
+            <div class="col-sm-5" style="background-image: url(../../../../assets/images/mascotas/registro.jfif); background-position: center center; 
+            background-size: cover; ">
+             <button class="btn btn-danger" (click)="goBack()" style="margin-top: 10px;"> <i class="bi bi-backspace-fill"></i>  Regresar</button>
+  
+            </div>
+            <div class="col-sm-7" >
+  
+                <div class="container" >
+                 <h2 class="text-center">Edita los campos necesarios</h2>
+                 <p class="text-md-start"> Aqui puedes editar los campos necesarios de la mascota seleccionada, ¡fíjate bien antes de hacer algun cambio!</p>
+                </div> 
+             
+             
+                 <form action="" >
+                     <div class="form-floating mb-3">
+                         <input type="text" class="form-control" id="nombre" placeholder="Pastelito" name="nombre">
+                         <label for="nombre">Nombre</label>
+                       </div>
+                       <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="edad" placeholder="3" name="edad">
+                        <label for="edad">Edad</label>
+                      </div>
+  
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="especie" placeholder="23" name="especie">
+                        <label for="especie">Especie</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="raza" placeholder="23" name="raza">
+                        <label for="raza">Raza</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="color" placeholder="Café Oscuro" name="color">
+                        <label for="color">Color</label>
+                      </div>
+  
+                      <div class="form-floating mb-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Seleccionar Sexo</option>
+                            <option value="macho">Macho</option>
+                            <option value="hembra">Hembra</option>
+                          </select>
+  
+                      </div>
+  
+                      <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingInput" placeholder="23">
+                        <label for="peso">Peso (en Kg)</label>
+                      </div>
+  
+  
+  
+                      <div class="form-floating mb-3 text-center" style="align-items: center; justify-content: center;">
+                        <button type="submit" class="btn btn-primary">Registrar</button>
+  
+                      </div>
+                     
+                    
+                 </form>
+                </div> 
+  
+        </div>
+    </div>
+  
+  </div>
