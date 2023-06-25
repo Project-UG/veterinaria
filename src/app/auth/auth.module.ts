@@ -4,26 +4,22 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { Route, RouterModule } from '@angular/router';
 
-const routes:Route[] = [
+const routes: Route[] = [
   {
-    path:'login',
-    component:LoginComponent
+    path: 'login',
+    component: LoginComponent,
+    title: 'Inicio de Sesión',
   },
   {
-    path:'registro',
-    component:RegistroComponent
-  }
-]
+    path: 'registro',
+    component: RegistroComponent,
+    title: 'Registro',
+  },
+];
 
 @NgModule({
-  declarations: [
-    LoginComponent,
-    RegistroComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes)
-  ],
-  exports:[RouterModule]
+  declarations: [LoginComponent, RegistroComponent],
+  imports: [CommonModule, RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class AuthModule { }
+export class AuthModule {}

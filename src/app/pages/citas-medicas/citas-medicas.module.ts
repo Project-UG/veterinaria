@@ -7,13 +7,11 @@ import { AgregarCitaComponent } from './agregar-cita/agregar-cita.component';
 import { CitasMedicasHomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-const routes:Route[] = [
-  {path: '', component: CitasMedicasHomeComponent, title: 'Citas Médicas'},
-  {path: 'detalle/:id', component: DetalleComponent, title: 'Cita Médica'},
-  {path: 'nueva', component: AgregarCitaComponent, title: 'Nueva Cita',
-  },
+const routes: Route[] = [
+  { path: '', component: CitasMedicasHomeComponent, title: 'Citas Médicas' },
+  { path: 'detalles/:id', component: DetalleComponent, title: 'Cita Médica' },
+  { path: 'nueva', component: AgregarCitaComponent, title: 'Nueva Cita' },
 ];
-
 
 @NgModule({
   declarations: [
@@ -28,6 +26,6 @@ const routes:Route[] = [
     FormsModule,
     ReactiveFormsModule,
   ],
-  exports:[RouterModule]
+  exports: [RouterModule],
 })
-export class CitasMedicasModule { }
+export class CitasMedicasModule {}
