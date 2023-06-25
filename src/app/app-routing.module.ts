@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DetallesMascotasComponent } from './pages/mascotas/detalles-mascotas/detalles-mascotas.component';
+import { AgregarMascotaComponent } from './pages/mascotas/agregar-mascota/agregar-mascota.component';
+import { EditarMascotaComponent } from './pages/mascotas/editar-mascota/editar-mascota.component';
 
 const routes: Routes = [
   {
@@ -21,6 +24,10 @@ const routes: Routes = [
     redirectTo: 'app',
     pathMatch: 'full',
   },
+
+  /* { path: 'mascotas', component: DetallesMascotasComponent },
+  { path: 'registro-mascota', component: AgregarMascotaComponent },
+  { path: 'editar-mascota', component: EditarMascotaComponent }, */
 ];
 
 @NgModule({

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Paciente } from '../types/paciente';
 import axios from 'axios';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -32,6 +33,7 @@ export class PacienteService {
     const response = await axios.put(`${this.url}/${id}`, paciente);
     return response.data;
   }
+  
 
   async remove(id: number): Promise<void> {
     await axios.delete(`${this.url}/${id}`);

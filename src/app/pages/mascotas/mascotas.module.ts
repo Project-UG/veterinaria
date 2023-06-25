@@ -19,7 +19,7 @@ const routes:Route[] = [
 
   {path:'editar/:id', 
   component :EditarMascotaComponent, 
-  title:'Editar Mascotas'},
+  title:'Editar Mascota'},
 
 ]
 

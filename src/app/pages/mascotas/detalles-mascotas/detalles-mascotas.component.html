@@ -1,7 +1,7 @@
-<div class="container " >
+<div class="container mt-3 " >
     <div class="container align-items-center">
       <div class="row" >
-          <div class="col-sm-6 align-items-center">
+          <div class="col-sm-8 align-items-center">
             <div class="card" >
               <img src="../../../../assets/images/mascotas/gato-registro.png" class="card-img-fluid img-custom"   alt=".." style=" width: 80%; align-items: center;" >
               <div class="card-body">
@@ -12,59 +12,70 @@
             </div>
 
           </div>
-          <div class="col-sm-6 align-items-center">
-              
-                <div class="card" >
-                  <img src="../../../../assets/images/mascotas/gato-detalle.png" class="card-img-top img-custom" alt=".." style=" width: 80%;">
-                  <div class="card-body">
-                    <h5 class="card-title">Consultar servicios</h5>
-                    <p class="card-text">Al darle clic al botón podrá Cosnutlar servicios dados por una serie de filtros.</p>
-                    <a href="#" class="btn btn-primary"> <i class="bi bi-clipboard-minus" style="font-size: 1.5rem;"></i> Consultar</a>
+          <div class="col-sm-4">
+                    <div style="background-image: url(../../../../assets/images/mascotas/gato-detalle.png); background-position: center center; 
+                    background-size: cover;  ">
+                    <img src="../../../../assets/images/mascotas/gato-detalle.png" width="100%">
+                    
                   </div>
-                </div>
 
-                  <!-- <div class="col text-center" style="box-shadow: 3px 5px 6px;"> <p>Clic en el icono para el historial de consultas y servicios</p></div>
-              <div class="col" > <button class="btn btn-info"> Consultar<i class="bi bi-clipboard-minus"></i></i></button></div>
--->
-              
-              
-              
+                </div>     
+  
   </div>
 
       </div>
-   
-  <div class="container" style="margin-top: 30px;">
-    <div class="container text-center" > <h2>Mascotas Registradas</h2></div>
-    
-      <table class="table table-hover" ngIf="">
-          <thead>
-            <tr class="table-dark">
-              <th scope="col">id</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Edad</th>
-              <th scope="col">Especie</th>
-              <th scope="col">Raza</th>
-              <th scope="col">Color</th>
-              <th scope="col">Sexo</th>
-              <th scope="col">Peso</th>
-              <th scope="col">Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            
-            </tr>
 
-          </tbody>
-        </table>
-  </div>
+      
+      <div class="container" style="margin-top: 30px;">
+        <div class="container text-center" > 
+          <h2>Mascotas Registradas</h2>
+          <p>En la siguiente tabla puedes consultar las mascotas ingresadas al sistema rádpidamente,
+            y realizar acciones como editar o eliminarlas, ten cuidado antes de hacerlo porque son acciones 
+            que no se pueden deshacer.
+          </p>
+        </div>
+        
+          <table class="table table-hover" >
+              <thead>
+                <tr class="table-dark">
+                  <th scope="col" style="text-align: center;"> ID </th>
+                  <th scope="col" style="text-align: center;"> Nombre </th>
+                  <th scope="col" style="text-align: center;"> Edad </th>
+                  <th scope="col" style="text-align: center;"> Especie </th>
+                  <th scope="col" style="text-align: center;"> Raza </th>
+                  <th scope="col" style="text-align: center;"> Color </th>
+                  <th scope="col" style="text-align: center;"> Sexo </th>
+                  <th scope="col" style="text-align: center;"> Peso </th>
+                  <th scope="col" style="text-align: center;"> Acciones </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let paciente of pacientes">
+                  <th>{{paciente.id}}</th>
+                  <td>{{paciente.nombre}}</td>
+                  <td>{{paciente.edad}}</td>
+                  <td>{{paciente.especie}}</td>
+                  <td>{{paciente.raza}}</td>
+                  <td>{{paciente.color}}</td>
+                  <td>{{paciente.sexo}}</td>
+                  <td>{{paciente.peso}} Kg</td>
+    
+                  <td> <a class="btn btn-warning " [routerLink]="['/app/mascotas/editar',paciente.id]"  ><i class="bi bi-pencil-square bi-sm">    </i></a> <button type="button" class="btn btn-danger " (click)="eliminarRegistro(paciente.id)" ><i class="bi bi-trash-fill bi-sm"></i></button></td>
+                
+                </tr>
+    
+              </tbody>
+            </table>
+      </div>
+
+
+   
+  
 
    
    </div>
 
   
-  </div>
+ 
+
+
