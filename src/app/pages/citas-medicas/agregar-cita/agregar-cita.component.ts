@@ -14,12 +14,11 @@ import { PacienteService } from 'src/app/services/paciente.service';
 })
 export class AgregarCitaComponent implements OnInit {
   fecha_cita = '';
-  fecha_cita_generada = '';
-  hora_cita = '';
-  paciente = '';
-  dueño = '';
+  hora_consulta = '';
+  nombre_paciente = '';
+  nombre_propietario = '';
   email_dueño = '';
-  consultorio = 0;
+  numero_consultorio = 0;
 
   form: FormGroup;
 
@@ -34,11 +33,10 @@ export class AgregarCitaComponent implements OnInit {
     this.form = this.fb.group({
       email_propietario: ['', Validators.email],
       fecha_cita: ['', Validators.required],
-      fecha_cita_generada: ['', Validators.required],
-      hora_cita: ['', Validators.required],
-      paciente: ['', Validators.required],
-      dueño: ['', Validators.required],
-      consultorio: ['', Validators.required],
+      hora_consulta: ['', Validators.required],
+      nombre_paciente: ['', Validators.required],
+      nombre_propietario: ['', Validators.required],
+      numero_consultorio: ['', Validators.required],
     });
   }
 
@@ -74,13 +72,12 @@ export class AgregarCitaComponent implements OnInit {
 
     const citaMedica: CitaMedica = {
       historial_id: Number(hist?.id),
-      fecha_cita: date,
-      fecha_cita_generada: date,
+      fecha_cita: this.form.value.fecha_cita,
+      generada: date,
       hora_cita: this.form.value.hora_cita,
       paciente: this.form.value.paciente,
       propietario: this.form.value.propietario,
       consultorio: this.form.value.consultorio,
-      id: 0,
     };
 
     if (propietario && historiales) {
