@@ -1,0 +1,59 @@
+<div class="container">
+    <form 
+        class="ml-4 mr-4"
+        [formGroup] = "form"
+    >
+        <div class="row">
+            <label>Codigo</label>
+            <div class="col-8">
+                <input type = "text" 
+                    formControlName="codigo"
+                    class="form-control">                
+            </div>
+
+        </div>
+
+        <div class="row">
+            <label>Descripción</label>
+            <div class="col-8">
+                <input 
+                    formControlName="descripcion"
+                    type = "text" class="input form-control">                
+            </div>
+
+        </div>
+
+        <div class="row">
+            <label>Estado</label>
+            <div class="col-8">
+                <select class="form-control" formControlName="estado">
+                    <option value="true">Activo</option>
+                    <option value="false">Inactivo</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-3"></div>
+            <div class="col-3">
+                <button class="btn btn-info"
+                 [disabled]="form.invalid"   
+                 (click)="guardarAction()"
+                >{{labelAction}}</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary"
+                    (click)="cancelarAction()"
+                    >Cancelar</button>
+            </div>
+            <div class="col-3">
+
+            </div>
+
+
+        </div>
+
+    </form>
+
+</div>

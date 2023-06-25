@@ -1,14 +1,27 @@
-<div
-    class="container">
-    <div 
-        class = "sidebard col-4"
-        >
+<!--<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
         <app-sidebar></app-sidebar>
-    </div>
-    <div
-        class="content col-8" 
-        >
+      </div>
+      <div class="col-md-10">
         <router-outlet></router-outlet>
+      </div>
     </div>
+  </div>-->
+
+  <div id="main-wrapper">
+
+    <app-navbar></app-navbar>
+
+    <app-sidebar></app-sidebar>
+
+    <div class="page-wrapper">
+        <div class="container-fluid">
+
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+
 
 </div>

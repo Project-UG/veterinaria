@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { Route, RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes:Route[] = [
   {
@@ -22,7 +23,10 @@ const routes:Route[] = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forChild(routes),
+    
   ],
   exports:[RouterModule]
 })

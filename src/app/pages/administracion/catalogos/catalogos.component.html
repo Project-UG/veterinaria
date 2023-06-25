@@ -1,0 +1,102 @@
+<ng-template #detalle let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Detalles de Catálogo {{catalogoInputDetalle.descripcion}}</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('close')"></button>
+    </div>
+    <div class="modal-body">
+        <app-detalles-catalogo
+           [catalogo]="catalogoInputDetalle"
+        >
+        </app-detalles-catalogo>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="modal.close('ok')">OK</button>
+    </div>
+</ng-template>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{tituloModal}}</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('close')"></button>
+    </div>
+    <div class="modal-body">
+        <app-nuevo-catalogo
+            [accion]="accion"
+            [catalogo]="catalogoInput"
+            (guardar) = "modal.close('ok')"
+            (cancelar) = "modal.close('ok')"
+        >
+        </app-nuevo-catalogo>
+    </div>
+</ng-template>
+
+
+<div class="container-fluid ml-3 mr-3 mt-2">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Buscar..."
+                            [(ngModel)]="busqueda"
+                            (keyup)="buscar($event)" 
+                            data-toggle="tooltip" data-placement="top" title="Ingrese un texto referencial"
+                        >
+                    </div>
+                    <div class="col-md-3">
+                        <select name="filtro" id="filtro" class="form-control" (change)="capturar($event)">
+                            <option value="0">Todos..</option>
+                            <option value="1">Cargar Activos</option>
+                            <option value="2">Cargar Inactivos</option>
+                            <option value="3">Código</option>
+                            <option value="4">descripción</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <button class="btn btn-info" (click)="buscar(null)">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <button class="btn btn-secondary" (click)="registrar(content)">Registrar Catálogo</button>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Fecha de Creación</th>
+                <th scope="col">Fecha de Modificación</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Ver Detalles</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cat of catalogos">
+                <td>{{cat.codigo}}</td>
+                <td>{{cat.descripcion}}</td>
+                <td>{{cat.fechaCreacion | date : 'dd/MM/yyyy'}}</td>
+                <td>{{cat.fechaModificacion | date : 'dd/MM/yyyy'}}</td>
+                <td>{{(cat.estado)? 'Activo' : 'Inactivo'}}</td>
+                <td><button (click)="verDetalles(detalle, cat)" class="btn btn-dark">...</button></td>
+                <td>
+                    <button (click)="actualizar(cat , content)" class="btn btn-info">Actualizar</button>
+                    <a (click)="eliminar(cat)">Eliminar</a>
+
+                </td>
+
+              </tr>
+    
+            </tbody>
+          </table>
+    </div>
+</div>
+
+
+

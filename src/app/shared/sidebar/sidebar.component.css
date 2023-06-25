@@ -1,0 +1,29 @@
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .sidebar .nav-link {
+    color: #fff;
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: #555;
+  }
+  
+  .sidebar .dropdown-menu {
+    background-color: #444;
+  }
+  
+  .sidebar .dropdown-item {
+    color: #fff;
+  }
+  
+  .sidebar .dropdown-item:hover {
+    background-color: #555;
+  }
+  a:link, a:visited, a:active {
+    text-decoration:none;
+}
+  

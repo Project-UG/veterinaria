@@ -60,7 +60,12 @@ const routes: Route[] = [
 
 @NgModule({
   declarations: [MainComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
+  imports: [
+      CommonModule, 
+      RouterModule.forChild(routes), 
+      SharedModule
+  ] ,     
+
   exports: [RouterModule],
 })
 export class PagesModule {}
