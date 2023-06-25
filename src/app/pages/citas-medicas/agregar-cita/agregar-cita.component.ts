@@ -10,7 +10,7 @@ import { PacienteService } from 'src/app/services/paciente.service';
 @Component({
   selector: 'app-agregar-cita',
   templateUrl: './agregar-cita.component.html',
-  styleUrls: ['./agregar-cita.component.css']
+  styleUrls: ['./agregar-cita.component.css'],
 })
 export class AgregarCitaComponent implements OnInit {
   fecha_cita = '';
@@ -52,14 +52,15 @@ export class AgregarCitaComponent implements OnInit {
   async agregarCita() {
     const email = this.form.value.email_propietario;
 
-    const dueño = await this.propietarioService.getByEmail(email);
+    const propietario = await this.propietarioService.getByEmail(email);
 
-    const historiales = await this.historialMedicoService.getByPropietarioId(dueño[0].id);
-    
+    const historiales = await this.historialMedicoService.getByPropietarioId(
+      propietario[0].id
+    );
+
     const pacientesIds = historiales.map((h) => h.paciente_id);
 
     const nombre_paciente = this.form.value.nombre_paciente;
-
 
     const pacienteId = await this.findAsync(pacientesIds, async (i: number) => {
       const p = await this.pacienteService.getById(i);
@@ -77,12 +78,12 @@ export class AgregarCitaComponent implements OnInit {
       fecha_cita_generada: date,
       hora_cita: this.form.value.hora_cita,
       paciente: this.form.value.paciente,
-      dueño: this.form.value.dueño,
+      propietario: this.form.value.propietario,
       consultorio: this.form.value.consultorio,
-      id: 0
+      id: 0,
     };
 
-    if (dueño && historiales) {
+    if (propietario && historiales) {
       this.citaMedicaService.create(citaMedica);
       this.form.reset();
       this.router.navigate(['/app/citas-medicas']);
@@ -90,5 +91,4 @@ export class AgregarCitaComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-
 }
