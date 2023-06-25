@@ -1,0 +1,42 @@
+<div class="container mt-5">
+  <button
+    class="btn btn-primary mb-3"
+    [routerLink]="['/app/historial-medico', citaMedica.historial_id]"
+    type="button"
+  >
+    <i class="bi bi-arrow-left-short"></i> Atrás
+  </button>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title mb-3">Consulta #{{ citaMedica.id }}</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <h6 class="card-subtitle mb-2 text-muted">
+            Fecha en que se genero la cita
+          </h6>
+          <p class="card-text">{{ citaMedica.fecha_cita_generada }}</p>
+
+          <h6 class="card-subtitle mb-2 text-muted">
+            Fecha para asistir a la cita
+          </h6>
+          <p class="card-text">{{ citaMedica.fecha_cita }}</p>
+
+          <h6 class="card-subtitle mb-2 text-muted">
+            Hora para asistir a la cita
+          </h6>
+          <p class="card-text">{{ citaMedica.hora_cita }}°</p>
+
+          <h6 class="card-subtitle mb-2 text-muted">Nombre del paciente</h6>
+          <p class="card-text">{{ citaMedica.paciente }}</p>
+
+          <h6 class="card-subtitle mb-2 text-muted">Dueño del paciente</h6>
+          <p class="card-text">{{ citaMedica.propietario }}</p>
+
+          <h6 class="card-subtitle mb-2 text-muted">Consultorio</h6>
+          <p class="card-text">{{ citaMedica.consultorio }}</p>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
