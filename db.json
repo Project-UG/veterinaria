@@ -388,5 +388,19 @@
       "observaciones": "no observaciones",
       "id": 11
     }
+  ],
+  "citas-medicas": [
+    {
+      "historial_id": 10,
+      "fecha_cita": "2023-06-28",
+      "generada": "2023-06-25T20:31:00.446Z",
+      "id": 1
+    },
+    {
+      "historial_id": 1,
+      "fecha_cita": "2023-06-28",
+      "generada": "2023-06-25T20:31:50.945Z",
+      "id": 2
+    }
   ]
 }
