@@ -3,7 +3,7 @@
       <div class="row">
 
         <!-- style="padding: 2rem 3rem; -->
-          <div class="col-sm-5" style="background-image: url(../../../../assets/images/mascotas/registro.jfif); background-position: center center; 
+          <div class="col-sm-5" style="background-image: url(../../../../assets/images/mascotas/perro-editar.jfif); background-position: center center; 
           background-size: cover; ">
            <button class="btn btn-danger" (click)="goBack()" style="margin-top: 10px;"> <i class="bi bi-backspace-fill"></i>  Regresar</button>
 
@@ -19,7 +19,7 @@
                <form (ngSubmit)="editarMascota()" >
 
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control " id="disabledTextInput"  [(ngModel)]="id"  name="id" readonly  placeholder="Input deshabilitado">
+                  <input type="text" class="form-control " id="disabledTextInput"  [(ngModel)]="id"  name="id" readonly  [disabled]="true" placeholder="Input deshabilitado">
                   <label for="disabledTextInput"  class="form-label">Id</label>
                 </div>
 
