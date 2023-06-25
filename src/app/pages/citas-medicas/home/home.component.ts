@@ -9,10 +9,9 @@ import { Paciente } from 'src/app/types/paciente';
 @Component({
   selector: 'app-citas-medicas-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
-export class CitasMedicasHomeComponent implements OnInit{
-
+export class CitasMedicasHomeComponent implements OnInit {
   citaMedicaService: CitaMedicaService = inject(CitaMedicaService);
 
   listCita: CitaMedica[] = [];
@@ -22,7 +21,9 @@ export class CitasMedicasHomeComponent implements OnInit{
   historial!: HistorialMedico[];
   pacientes!: Paciente[];
 
-  historialMedicoService: HistorialMedicoService = inject(HistorialMedicoService);
+  historialMedicoService: HistorialMedicoService = inject(
+    HistorialMedicoService
+  );
   pacienteService: PacienteService = inject(PacienteService);
 
   constructor() {
@@ -52,5 +53,4 @@ export class CitasMedicasHomeComponent implements OnInit{
   }
 
   ngOnInit(): void {}
-
 }

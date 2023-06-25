@@ -32,7 +32,7 @@ export class FichasMedicasHomeComponent implements OnInit {
     });
   }
 
-  async buscarCitasGeneradas(text: string) {
+  async buscar(text: string) {
     if (!text) {
       this.listaFiltrada = this.listaFichasMedicas;
       // console.log('no text');
