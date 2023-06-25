@@ -23,6 +23,11 @@ export class CitaMedicaService {
     return response.data;
   }
 
+  async getByHistorial(id: number): Promise<CitaMedica[]> {
+    const response = await axios.get(`${this.url}?historial_id=${id}`);
+    return response.data;
+  }
+
   async create(citaMedica: CitaMedica): Promise<CitaMedica> {
     const response = await axios.post(this.url, citaMedica);
     return response.data;
