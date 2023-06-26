@@ -1,0 +1,87 @@
+<div class="container-fluid mt-3 "  >
+  <div class="container-fluid"  style ="box-shadow: 2px 3px 4px;" >
+      <div class="row">
+
+        <!-- style="padding: 2rem 3rem; -->
+          <div class="col-sm-5" style="background-image: url(../../../../assets/images/mascotas/registro.jfif); background-position: center center; 
+          background-size: cover; ">
+           <button class="btn btn-danger" (click)="goBack()" style="margin-top: 10px;"> <i class="bi bi-backspace-fill"></i>  Regresar</button>
+
+          </div>
+          <div class="col-sm-7" >
+
+              <div class="container" >
+               <h2 class="text-center">Actualice los datos</h2>
+               <p class="text-md-start"> Aqui puedes actualizar los campos de nueva mascota que esté ingresada al sistema</p>
+              </div> 
+           
+           
+               <form (ngSubmit)="editarMascota()" >
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control " id="disabledTextInput"  [(ngModel)]="id"  name="id" readonly  placeholder="Input deshabilitado">
+                  <label for="disabledTextInput"  class="form-label">Id</label>
+                </div>
+
+                   <div class="form-floating mb-3">
+                       <input type="text" class="form-control" id="nombre"  [(ngModel)]="nombre"  placeholder="Pastelito" name="nombre" required >
+                       <label for="nombre">Nombre</label>
+                     </div>
+                     <div class="form-floating mb-3">
+                      <input type="number" class="form-control" id="edad" [(ngModel)]="edad"  name="edad" placeholder="3" required>
+                      <label for="edad">Edad (en años)</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <select class="form-select"  id="especie" [(ngModel)]="especie"  name="especie" placeholder="Seleccionar Especie" required>
+                          <option selected disabled value="">Seleccionar Especie</option>
+                          <option value="Canino">Canino</option>
+                          <option value="Felino">Felino</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="raza" [(ngModel)]="raza"  name="raza" placeholder="pitbull" required>
+                      <label for="raza">Raza</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="color" [(ngModel)]="color"  name="color" placeholder="azul" required>
+                      <label for="color">Color</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <select class="form-select"  id="sexo" [(ngModel)]="sexo"  name="sexo" required>
+                          <option selected disabled value="">Seleccionar Sexo</option>
+                          <option value="Macho">Macho</option>
+                          <option value="Hembra">Hembra</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control" id="peso" [(ngModel)]="peso" name="peso" placeholder="23" required>
+                      <label for="peso">Peso (en Kg)</label>
+                    </div>
+
+
+
+
+                    <div class="form-floating mb-3 text-center" style="align-items: center; justify-content: center;">
+                      <button type="submit"  class="btn btn-primary">Actualizar Registro</button>
+
+                    </div>
+                   
+                  
+               </form>
+              </div> 
+
+      </div>
+  </div>
+  <pre>
+   
+  </pre>
+
+</div>
+

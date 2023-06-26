@@ -10,4 +10,6 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [CommonModule, RouterModule],
   exports: [SidebarComponent, FooterComponent, NavbarComponent],
 })
-export class SharedModule {}
+export class SharedModule {
+  
+}

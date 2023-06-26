@@ -13,6 +13,7 @@ import { Propietario } from 'src/app/types/propietario';
   styleUrls: ['./ficha-medica.component.css'],
 })
 export class FichaMedicaComponent implements OnInit {
+  
   @Input() fichaMedica!: FichaMedica;
   historialMedicoService: HistorialMedicoService = inject(
     HistorialMedicoService

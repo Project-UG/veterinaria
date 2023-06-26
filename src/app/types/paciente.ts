@@ -1,19 +1,20 @@
 export interface Paciente {
-  id: number;
+  id?: number;
   registro: Date;
   nombre: string;
   edad: number;
-  especie: Especie;
+  especie: string;
   raza: string;
   color: string;
-  sexo: Sexo;
+  sexo: string;
   peso: number;
-  foto: string;
+  foto?: string;
+  actualizacion: Date;
 }
 
 export enum Especie {
   Canino = 'Canino',
-  Felino = 'Falino',
+  Felino = 'Felino',
 }
 
 export enum Sexo {

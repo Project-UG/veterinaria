@@ -40,6 +40,18 @@ export class OpcionesService {
           icono: 'fa fa-stethoscope',
           titulo :'Fichas Médicas'
         },
+        {
+          id:  6,
+          url:'/app/mascotas',
+          icono: 'fa fa-address-card',
+          titulo :'Mascotas'
+        },
+        {
+          id:  7,
+          url:'/app/citas-medicas',
+          icono: 'fa fa-calendar',
+          titulo :'Citas Médicas'
+        },
       ]; 
    }
 
