@@ -41,6 +41,33 @@ export class RolesService {
         opciones : [],
         fechaCreacion : new Date(),
         obligatorio : true
+      },
+      
+      {
+        id : 4,
+        nombre : 'Médico',
+        opciones : [
+          {
+            id:  5,
+            url:'/app/fichas-medicas',
+            icono: 'fa fa-stethoscope',
+            titulo :'Fichas Médicas'
+          },
+          {
+            id:  7,
+            url:'/app/citas-medicas',
+            icono: 'fa fa-calendar',
+            titulo :'Citas Médicas'
+          },
+          {
+            id:  8,
+            url:'/app/historial-medico',
+            icono: 'fa fa-archive',
+            titulo :'Historial Médico'
+          }
+        ],
+        fechaCreacion : new Date(),
+        obligatorio : true
       }
 
     );
