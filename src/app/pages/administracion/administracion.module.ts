@@ -8,6 +8,7 @@ import { CatalogosComponent } from './catalogos/catalogos.component';
 import { MedicinasComponent } from './medicinas/medicinas.component';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthModule } from 'src/app/auth/auth.module';
 
 const routes:Route[] = [
   {
@@ -44,7 +45,8 @@ const routes:Route[] = [
     ComponentsModule,
     NgbModalModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AuthModule
 
   ],
   exports:[

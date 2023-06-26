@@ -1,1 +1,121 @@
-<p>medicinas works!</p>
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{tituloModal}}</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('close')"></button>
+    </div>
+    <div class="modal-body">
+        <app-nueva-medicina
+            [accion]="accion"
+            [medicina]="medicinaInput"
+            (guardar) = "modal.close('ok')"
+            (cancelar) = "modal.close('ok')"
+        >
+        </app-nueva-medicina>
+    </div>
+</ng-template>
+
+
+<div class="container-fluid ml-3 mr-3 ">
+    <div class="row">
+        <h4>Mantenimiento de Medicinas</h4>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Buscar..." 
+                            [(ngModel)]="busqueda"
+                            (keyup)="buscar($event)" 
+                            data-toggle="tooltip" data-placement="top" title="Ingrese un texto referencial"
+                        >
+                    </div>
+                    <div class="col-md-3">
+                        <select name="filtro" id="filtro" class="form-control" (change)="capturar($event)">
+                            <option value="0"><i class="fa fa-filter" aria-hidden="true"></i>
+                                Todos..</option>
+                            <option value="1">Cargar Activos</option>
+                            <option value="2">Cargar Inactivos</option>
+                            <option value="3">Descripción</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <button class="btn btn-info" (click)="buscar(null)">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            Buscar
+                            
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <button class="btn btn-secondary" (click)="registrar(content)">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                            Nueva Medicina</button>
+        </div>
+    </div>
+    <div class="row mt-4" *ngIf="medicinas.length==0">
+        <div class="continer">
+            <div class="row mt-4">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <h6>No hay datos!</h6>
+                </div>
+                <div class="col-4"></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4" *ngIf="medicinas.length>0">
+        <table class="table table-hover justify-content-center">
+            <thead>
+              <tr>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Fecha de creación</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Uso</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let med of medicinas" class="justify-content-center">
+                <td>{{med.descripcion}}</td>
+                <td>{{med.fechaCreacion | date: 'dd/MM/yyyy'}}</td>
+                <td>{{med.tipo}}</td>
+                <td><p>{{med.detalleUso}}</p></td>
+                <td>{{med.stock}}</td>
+                <td>{{(med.estado)? 'Activo' : 'Inactivo'}}</td>
+        
+                <td class="justify-content-center">
+                    <a data-toggle="tooltip" 
+                        data-original-title="Borrar"
+                        class="cursor"
+                        (click)="actualizar(med , content)">
+                        <i class="fa fa-pencil text-inverse m-r-10"></i> 
+                    </a>
+                    &nbsp;
+
+                    <a data-toggle="tooltip" 
+                        data-original-title="Borrar"
+                        class="cursor"
+                        (click)="eliminar(med)">
+                        <i class="fa fa-close text-danger"></i> 
+                    </a>
+
+                </td>
+
+              </tr>
+    
+            </tbody>
+          </table>
+    </div>
+</div>
+
+
+

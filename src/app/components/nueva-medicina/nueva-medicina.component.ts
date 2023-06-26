@@ -2,15 +2,16 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccionModal } from 'src/app/helpers/enums';
 import { CatalogosService } from 'src/app/services/catalogos.service';
-import { Catalogo } from 'src/app/types/catalogos.interface';
+import { MedicinasService } from 'src/app/services/medicinas.service';
+import { Catalogo, Medicina } from 'src/app/types/catalogos.interface';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-nuevo-catalogo',
-  templateUrl: './nuevo-catalogo.component.html',
-  styleUrls: ['./nuevo-catalogo.component.css']
+  selector: 'app-nueva-medicina',
+  templateUrl: './nueva-medicina.component.html',
+  styleUrls: ['./nueva-medicina.component.css']
 })
-export class NuevoCatalogoComponent implements OnInit {
+export class NuevaMedicinaComponent implements OnInit {
 
   public form!:FormGroup;
 
@@ -19,22 +20,22 @@ export class NuevoCatalogoComponent implements OnInit {
   @Input("accion")
   public accion!: string;
 
-  @Input("catalogo")
-  public catalogo!: Catalogo;
+  @Input("medicina")
+  public medicina!: Medicina;
 
   @Output("guardar")
   guardar : EventEmitter<Catalogo> = new EventEmitter<Catalogo>();
 
-  @Output("guardar")
+  @Output("cancelar")
   cancelar : EventEmitter<void> = new EventEmitter<void>();
 
   constructor(
     private fb:FormBuilder,
-    private catalogoService : CatalogosService
+    private medicinasService : MedicinasService
   ) {
     
     if(this.accion == AccionModal.ACTUALIZAR){
-      this.form.setValue({...this.catalogo});
+      this.form.setValue({...this.medicina});
       this.labelAction = 'Actualizar'
     }
 
@@ -43,18 +44,16 @@ export class NuevoCatalogoComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.fb.group({
       id : '',
-      codigo : ['',Validators.required],
       descripcion : ['',Validators.required],
-      estado : true,
-      fechaCreacion : new Date()
+      tipo : ['',Validators.required],
+      detalleUso : '',
+      stock : 0,
+      estado : true
     });
 
-    console.log("catalogo ",this.catalogo);
-    
     if(this.accion == AccionModal.ACTUALIZAR){
-      this.form.setValue({...this.catalogo});
+      this.form.setValue({...this.medicina});
     }
-
   }
 
   guardarAction(){
@@ -64,7 +63,7 @@ export class NuevoCatalogoComponent implements OnInit {
 
       const { fechaCreacion , estado , ...datos  } = this.form.value;
 
-      const response = this.catalogoService.agregarCatalogo(
+      const response = this.medicinasService.agregarMedicina(
                           {
                             fechaCreacion: new Date(),
                             estado : true, 
@@ -81,10 +80,9 @@ export class NuevoCatalogoComponent implements OnInit {
 
       console.log(this.form.value);
 
-      const response = this.catalogoService.editarCatalogo(
+      const response = this.medicinasService.editarMedicina(
         {
           estado : (estado=='true')?true:false,
-          fechaCreacion : this.catalogo.fechaCreacion,
            fechaModificacion: new Date(),
           ...datos});
         Swal.fire({
@@ -97,8 +95,6 @@ export class NuevoCatalogoComponent implements OnInit {
     this.guardar.emit();
     this.cancelar.emit();
     this.form.reset();
-
-    console.log(this.catalogoService.getCatalogos());
 
   }
 

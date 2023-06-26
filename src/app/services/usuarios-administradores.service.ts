@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Usuario } from '../types/usuarios-administradores.interface';
 import { Response } from '../types/response.interface';
 import { RolesService } from './roles.service';
-import { ACTUALIZADO_EXITO, NO_ENCONTRADO } from '../helpers/mensajes';
+import { ACTUALIZADO_EXITO, ELIMINADO_EXITO, NO_ENCONTRADO } from '../helpers/mensajes';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -33,10 +34,18 @@ export class UsuariosAdministradoresService {
     return user;
   }
 
+  getByCorreo(correo : string) : Usuario[]{
+    const usuarios = this.usuarios.filter((us) => us.correo == correo);
+    return usuarios;
+  }
+
   getAllUsers(): Usuario[] {
-    const tempUsuarios = this.usuarios.filter(us => us.username !== 'root');
+    const usuario = localStorage.getItem('usuario');
+    const tempUsuarios = this.usuarios.filter(us => (us.username !== 'root' && us.username!==usuario));
     return tempUsuarios;
   }
+
+
 
   validarUsername(username: string): boolean {
     const user = this.usuarios.find((us) => us.username == username);
@@ -98,4 +107,30 @@ export class UsuariosAdministradoresService {
     }
   }
 
+  getActivos(){
+    const activos = this.usuarios.filter((us)=>us.estado == true);
+    return activos;
+  }
+
+  getInactivos(){
+    const inactivos = this.usuarios.filter((us)=>us.estado == false);
+    return inactivos;
+  }
+
+  eliminar(usuario : Usuario) : Response{
+      let index = 0;
+      this.usuarios.forEach((us,i)=>{
+          if(us.username == usuario.username){
+            index = i;
+          }
+      });
+
+      this.usuarios.splice(index,1);
+
+      return {
+        estado : 'ok',
+        mensaje : ELIMINADO_EXITO('Usuario','')
+      }
+      
+  }
 }

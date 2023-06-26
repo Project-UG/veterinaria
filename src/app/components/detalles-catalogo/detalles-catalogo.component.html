@@ -8,11 +8,11 @@
                         <label for="">Descripción</label>
                     </div>
                     <div class="col-md-4">
-                        <input class="form-control" type="text" formControlName="descripcion">
+                        <input id="descripcion" class="form-control" type="text" formControlName="descripcion">
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row mt-2">
                     <div class="col-md-4">
                         <label for="">Valor</label>
                     </div>
@@ -21,10 +21,12 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row mt-2">
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <button (click)="agregarDetalle()" [disabled]="form.invalid" class="btn btn-dark">Agregar Detalle</button>
+                        <button (click)="agregarDetalle()" [disabled]="form.invalid" class="btn btn-dark">Agregar</button>
+                    </div>
+                    <div class="col-md-4">
                     </div>
                 </div>
 
@@ -59,6 +61,18 @@
     
             </tbody>
           </table>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <button class="btn btn-dark" (click)="guardarDetalles()">Guardar</button>
+        </div>
+        <div class="col-md-4">
+            <button (click)="cancelar()" class="btn btn-info">Cancelar</button>
+
+        </div>
+        <div class="col-md-2"></div>
     </div>
 </div>
 

@@ -4,12 +4,18 @@ import { NuevoCatalogoComponent } from './nuevo-catalogo/nuevo-catalogo.componen
 import { NuevoDetalleCatalogoComponent } from './nuevo-detalle-catalogo/nuevo-detalle-catalogo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetallesCatalogoComponent } from './detalles-catalogo/detalles-catalogo.component';
+import { OpcionesComponent } from './opciones/opciones.component';
+import { NuevoRolComponent } from './nuevo-rol/nuevo-rol.component';
+import { NuevaMedicinaComponent } from './nueva-medicina/nueva-medicina.component';
 
 @NgModule({
   declarations: [
     NuevoCatalogoComponent,
     NuevoDetalleCatalogoComponent,
-    DetallesCatalogoComponent
+    DetallesCatalogoComponent,
+    OpcionesComponent,
+    NuevoRolComponent,
+    NuevaMedicinaComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +25,10 @@ import { DetallesCatalogoComponent } from './detalles-catalogo/detalles-catalogo
   exports:[
     NuevoCatalogoComponent,
     NuevoDetalleCatalogoComponent,
-    DetallesCatalogoComponent
+    DetallesCatalogoComponent,
+    OpcionesComponent,
+    NuevoRolComponent,
+    NuevaMedicinaComponent
   ]
 })
 export class ComponentsModule { }

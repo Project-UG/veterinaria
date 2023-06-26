@@ -28,6 +28,6 @@ const routes:Route[] = [
     RouterModule.forChild(routes),
     
   ],
-  exports:[RouterModule]
+  exports:[RouterModule , RegistroComponent]
 })
 export class AuthModule { }

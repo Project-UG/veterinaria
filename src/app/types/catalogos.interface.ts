@@ -4,6 +4,9 @@ export interface Medicina{
     tipo        : string;
     detalleUso  : string;
     stock       : number;
+    estado      : boolean;
+    fechaCreacion : Date;
+    fechaModificacion : Date
 }
 
 export interface Catalogo{

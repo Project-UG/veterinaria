@@ -1,1 +1,127 @@
-<p>roles works!</p>
+<ng-template #detalle let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Opciones del rol {{rolInputDetalles.nombre}}</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('close')"></button>
+    </div>
+    <div class="modal-body">
+        <app-opciones
+            [rol]="rolInputDetalles"
+            (guardar)="cargarLista()"
+            (ok)="modal.dismiss('close')"
+        >
+        </app-opciones>
+    </div>
+   
+</ng-template>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Nuevo Rol</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('close')"></button>
+    </div>
+    <div class="modal-body">
+        <app-nuevo-rol
+                (guardar)="cargarLista()"
+                (cancelar)="modal.dismiss('close')"
+            >
+        </app-nuevo-rol>
+    </div>
+</ng-template>
+
+
+<div class="container-fluid ml-3 mr-3 ">
+    <div class="row">
+        <h4>Administración de Roles</h4>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Buscar..." 
+                            [(ngModel)]="busqueda"
+                            (keyup)="buscar($event)" 
+                            data-toggle="tooltip" data-placement="top" title="Ingrese un texto referencial"
+                        >
+                    </div>
+                    <div class="col-md-3">
+                        <select name="filtro" id="filtro" class="form-control" (change)="capturar($event)">
+                            <option value="0"><i class="fa fa-filter" aria-hidden="true"></i>
+                                Todos..</option>
+                            <option value="3">Nombre</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <button class="btn btn-info" (click)="buscar(null)">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            Buscar
+                            
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <button class="btn btn-secondary" (click)="registrar(content)">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                            Agregar Rol</button>
+        </div>
+    </div>
+    <div class="row mt-4" *ngIf="roles.length==0">
+        <div class="continer">
+            <div class="row mt-4">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <h6>No hay datos!</h6>
+                </div>
+                <div class="col-4"></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4" *ngIf="roles.length>0">
+        <table class="table table-hover justify-content-center">
+            <thead>
+              <tr>
+                <th scope="col">Rol</th>
+                <th scope="col">Fecha de Creación</th>
+                <th scope="col">Opciones</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let rol of roles" class="justify-content-center">
+                <td>{{rol.nombre}}</td>
+                <td>{{rol.fechaCreacion | date : 'dd/MM/yyyy'}}</td>
+               
+                <td class="justify-content-center">
+                    <a data-toggle="tooltip" 
+                        data-original-title="Borrar"
+                        class="cursor"
+                        (click)="verDetalles(detalle, rol)">
+                        <i class="fa fa-plus-square"></i> 
+                    </a>
+                </td>
+                <td class="justify-content-center">
+                    
+                    <a data-toggle="tooltip" 
+                        data-original-title="Borrar"
+                        class="cursor"
+                        (click)="eliminar(rol)">
+                        <i class="fa fa-close text-danger"></i> 
+                    </a>
+
+                </td>
+
+              </tr>
+    
+            </tbody>
+          </table>
+    </div>
+</div>
+
+
+

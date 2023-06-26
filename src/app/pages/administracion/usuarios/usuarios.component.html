@@ -1,1 +1,101 @@
-<p>usuarios works!</p>
+<div class="container-fluid ml-3 mr-3 ">
+    <div class="row">
+        <h4>Administración de Usuarios</h4>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Buscar..." 
+                            [(ngModel)]="busqueda"
+                            (keyup)="buscar($event)" 
+                            data-toggle="tooltip" data-placement="top" title="Ingrese un texto referencial"
+                        >
+                    </div>
+                    <div class="col-md-3">
+                        <select name="filtro" id="filtro" class="form-control" (change)="capturar($event)">
+                            <option value="0"><i class="fa fa-filter" aria-hidden="true"></i>
+                                Todos..</option>
+                            <option value="1">Cargar Activos</option>
+                            <option value="2">Cargar Inactivos</option>
+                            <option value="3">Username</option>
+                            <option value="4">correo</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <button class="btn btn-info" (click)="buscar(null)">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            Buscar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row mt-4" *ngIf="usuarios.length==0">
+        <div class="continer">
+            <div class="row mt-4">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <h6>No hay datos!</h6>
+                </div>
+                <div class="col-4"></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4" *ngIf="usuarios.length>0">
+        <table class="table table-hover justify-content-center">
+            <thead>
+              <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Cambiar Rol</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let us of usuarios" class="justify-content-center">
+                <td>{{us.username}}</td>
+                <td>{{us.apellidos}}</td>
+                <td>{{us.nombres}}</td>
+                <td>{{us.correo}}</td>
+                <td>{{us.rol.nombre}}</td>
+                <td>
+                    <select name="filtro" id="filtro" class="form-control" (change)="asignarRol($event , us)">
+                        <option value="0"></option>
+                        <option
+                            *ngFor="let rol of roles"
+                            [value]="rol.id"
+                            >
+                            {{rol.nombre}}
+                        </option>
+                        
+                    </select>
+                </td>
+                <td class="justify-content-center">
+                   
+                    <a data-toggle="tooltip" 
+                        data-original-title="Borrar"
+                        class="cursor"
+                        (click)="eliminar(us)">
+                        <i class="fa fa-close text-danger"></i> 
+                    </a>
+
+                </td>
+
+              </tr>
+    
+            </tbody>
+          </table>
+    </div>
+</div>
+
+
+

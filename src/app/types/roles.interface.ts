@@ -3,7 +3,9 @@ import { Usuario } from "./usuarios-administradores.interface";
 export interface Rol{
     id     : number;
     nombre : string;
+    fechaCreacion? : Date;
     opciones : Opcion[];
+    obligatorio? : boolean
 }
 
 export interface RolUsuario{

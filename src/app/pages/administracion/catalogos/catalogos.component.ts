@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AccionModal } from 'src/app/helpers/enums';
 import { CatalogosService } from 'src/app/services/catalogos.service';
-import { Catalogo } from 'src/app/types/catalogos.interface';
+import { Catalogo, CatalogoDetalle } from 'src/app/types/catalogos.interface';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -146,6 +146,13 @@ export class CatalogosComponent implements OnInit {
       .result.then((result=>{
 
     }));
+  }
+
+  asignarDetalles(event : CatalogoDetalle[]){
+    console.log("input ", this.catalogoInputDetalle);
+    console.log("detalles nuevos :",event);
+    this.catalogoInputDetalle.detalles = event;
+    console.log("modificado ",this.catalogoInputDetalle);  
   }
 
 

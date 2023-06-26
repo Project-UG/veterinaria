@@ -1,0 +1,71 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="container">
+            <form>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="col-md-4">
+                            <label for="">Opciones</label>
+                        </div>
+                        <select name="filtro" id="filtro" class="form-control" (change)="capturar($event)">
+                            <option
+                                *ngFor="let opcion of opciones"
+                                [value]="opcion.id"
+                                >
+                                {{opcion.titulo}}
+                            </option>
+                            
+                        </select>  
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-4">
+                            <button (click)="agregarOpcion()" class="btn btn-dark">Agregar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            
+        </div>
+    </div>
+    <div class="row mt-4">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Titulo</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let opcion of opcionesRol">
+                <td>{{opcion.titulo}}</td>
+                <td>
+                    <a (click)="eliminar(opcion)">Eliminar</a>
+                </td>
+    
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <button class="btn btn-dark" (click)="guardarDetalles()">Guardar</button>
+        </div>
+        <div class="col-md-4">
+            <button (click)="cancelar()" class="btn btn-info">Cancelar</button>
+
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+
