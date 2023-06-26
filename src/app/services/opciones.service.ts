@@ -52,6 +52,13 @@ export class OpcionesService {
           icono: 'fa fa-calendar',
           titulo :'Citas Médicas'
         },
+        {
+          id:  8,
+          url:'/app/historial-medico',
+          icono: 'fa fa-archive',
+          titulo :'Historial Médico'
+        },
+
       ]; 
    }
 
