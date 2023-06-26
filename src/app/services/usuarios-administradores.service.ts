@@ -20,6 +20,26 @@ export class UsuariosAdministradoresService {
       fechaCreacion: new Date(),
       estado: true,
       rol   : this.rolService.getRolPrincipal()
+    },
+    {
+      username: 'admin',
+      password: 'admin',
+      correo: 'admin@veterinaria.com',
+      nombres: 'admin',
+      apellidos: 'admin',
+      fechaCreacion: new Date(),
+      estado: true,
+      rol   : this.rolService.getRolById(2)!
+    },
+    {
+      username: 'medico',
+      password: '1',
+      correo: 'medico@veterinaria.com',
+      nombres: 'Medico',
+      apellidos: 'Medico',
+      fechaCreacion: new Date(),
+      estado: true,
+      rol   : this.rolService.getRolById(4)!
     }
   ];
 
