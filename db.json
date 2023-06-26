@@ -387,6 +387,32 @@
       "pulso_femoral": "aumentado",
       "observaciones": "no observaciones",
       "id": 11
+    },
+    {
+      "historial_id": 1,
+      "registro": "2023-06-25T22:41:14.603Z",
+      "actualizacion": "2023-06-25T22:41:14.603Z",
+      "color_mucosas": "rojo",
+      "palpitacion_abdominal": "aumentada",
+      "genitales": "intactos",
+      "temperatura": 37,
+      "pulso_femoral": "normal",
+      "observaciones": "Ninguna observación",
+      "id": 12
+    }
+  ],
+  "citas-medicas": [
+    {
+      "historial_id": 10,
+      "fecha_cita": "2023-06-28",
+      "generada": "2023-06-25T20:31:00.446Z",
+      "id": 1
+    },
+    {
+      "historial_id": 1,
+      "fecha_cita": "2023-06-28",
+      "generada": "2023-06-25T20:31:50.945Z",
+      "id": 2
     }
   ]
 }

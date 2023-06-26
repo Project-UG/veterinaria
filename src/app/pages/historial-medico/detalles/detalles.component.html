@@ -53,9 +53,18 @@
           >
             <div class="accordion-body">
               <ul class="list-group">
-                <li class="list-group-item">Cita 1</li>
-                <li class="list-group-item">Cita 2</li>
-                <li class="list-group-item">Cita 3</li>
+                <li
+                  class="list-group-item"
+                  *ngFor="let citaMedica of citasMedicas"
+                >
+                  <a
+                    [routerLink]="[
+                      '/app/citas-medicas/detalles',
+                      citaMedica.id
+                    ]"
+                    >{{ citaMedica.fecha_cita }}
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -94,34 +103,6 @@
                     {{ fichaMedica.observaciones }}</a
                   >
                 </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="diagnosticosPanel">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#diagnosticosCollapse"
-              aria-expanded="false"
-              aria-controls="diagnosticosCollapse"
-            >
-              Diagnósticos Médicos
-            </button>
-          </h2>
-          <div
-            id="diagnosticosCollapse"
-            class="accordion-collapse collapse"
-            aria-labelledby="diagnosticosPanel"
-            data-bs-parent="#accordionPanel"
-          >
-            <div class="accordion-body">
-              <ul class="list-group">
-                <li class="list-group-item">Diagnóstico 1</li>
-                <li class="list-group-item">Diagnóstico 2</li>
-                <li class="list-group-item">Diagnóstico 3</li>
               </ul>
             </div>
           </div>

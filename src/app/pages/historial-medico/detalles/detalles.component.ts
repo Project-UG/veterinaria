@@ -8,6 +8,8 @@ import { HistorialMedico } from 'src/app/types/historialMedico';
 import { Paciente } from 'src/app/types/paciente';
 import { Propietario } from 'src/app/types/propietario';
 import { FichaMedicaService } from 'src/app/services/fichaMedica.service';
+import { CitaMedicaService } from 'src/app/services/citaMedica.service';
+import { CitaMedica } from 'src/app/types/citaMedica';
 
 @Component({
   selector: 'app-detalles',
@@ -23,12 +25,14 @@ export class DetallesComponent implements OnInit {
   pacienteService: PacienteService = inject(PacienteService);
   propietarioService: PropietarioService = inject(PropietarioService);
   fichaMedicaService: FichaMedicaService = inject(FichaMedicaService);
+  citaMedicaService: CitaMedicaService = inject(CitaMedicaService);
 
   historial!: HistorialMedico;
   paciente!: Paciente;
   propietario!: Propietario;
 
   fichasMedicas: FichaMedica[] = [];
+  citasMedicas: CitaMedica[] = [];
 
   historialMedicoId = parseInt(this.route.snapshot.params['id'], 10);
 
@@ -51,5 +55,8 @@ export class DetallesComponent implements OnInit {
       this.historialMedicoId
     );
     console.log(this.fichasMedicas);
+    this.citasMedicas = await this.citaMedicaService.getByHistorial(
+      this.historialMedicoId
+    );
   }
 }

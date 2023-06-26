@@ -5,16 +5,18 @@ import { RegistroComponent } from './registro/registro.component';
 import { Route, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-const routes:Route[] = [
+const routes: Route[] = [
   {
-    path:'login',
-    component:LoginComponent
+    path: 'login',
+    component: LoginComponent,
+    title: 'Inicio de Sesión',
   },
   {
-    path:'registro',
-    component:RegistroComponent
-  }
-]
+    path: 'registro',
+    component: RegistroComponent,
+    title: 'Registro',
+  },
+];
 
 @NgModule({
   declarations: [
@@ -30,4 +32,4 @@ const routes:Route[] = [
   ],
   exports:[RouterModule , RegistroComponent]
 })
-export class AuthModule { }
+export class AuthModule {}
